@@ -60,7 +60,7 @@ const Testimonials = () => {
                 What people <br /> are saying
               </motion.h1>
               <motion.h3 className="mb-5 text-xl font-light" variants={itemVariants}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hear from our satisfied users!
               </motion.h3>
               <motion.div className="mb-10 text-center" variants={itemVariants}>
                 <span className="inline-block w-1 h-1 ml-1 bg-indigo-500 rounded-full"></span>
@@ -76,7 +76,20 @@ const Testimonials = () => {
               animate={inView ? 'visible' : 'hidden'}
               variants={containerVariants}
             >
-              {[...Array(6)].map((_, index) => (
+              {[
+                {
+                  name: 'Mahesh Kumar',
+                  text: 'I absolutely love this product! It has made my life so much easier, and I can’t imagine going back to how things were before.',
+                },
+                {
+                  name: 'Chandu Kishore',
+                  text: 'The customer service is fantastic. They were quick to respond to my inquiries and helped me with all my questions. Highly recommend!',
+                },
+                {
+                  name: ' Priya Sharma',
+                  text: 'A game-changer! The quality is top-notch, and the experience has exceeded all my expectations. I’m a loyal customer for life.',
+                },
+              ].map((testimonial, index) => (
                 <motion.div
                   key={index}
                   className="px-4 md:w-1/3"
@@ -84,21 +97,14 @@ const Testimonials = () => {
                 >
                   <div className="w-full p-5 mx-auto mb-6 font-light text-gray-800 bg-white border border-gray-200 rounded-lg">
                     <div className="flex items-center w-full mb-4">
-                      <div className="w-10 h-10 overflow-hidden border border-gray-200 rounded-full bg-gray-50">
-                        <img
-                          className="object-cover w-full h-auto rounded-full"
-                          src={`https://i.pravatar.cc/100?img=${index + 1}`}
-                          alt=""
-                        />
-                      </div>
                       <div className="flex-grow pl-3">
-                        <h6 className="text-sm font-bold text-gray-600 uppercase">User {index + 1}</h6>
+                        <h6 className="text-sm font-bold text-gray-600 uppercase">{testimonial.name}</h6>
                       </div>
                     </div>
                     <div className="w-full">
                       <p className="text-sm leading-tight">
                         <span className="mr-1 text-lg italic font-bold leading-none text-gray-400">"</span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, obcaecati ullam excepturi dicta error deleniti sequi.
+                        {testimonial.text}
                         <span className="ml-1 text-lg italic font-bold leading-none text-gray-400">"</span>
                       </p>
                     </div>
