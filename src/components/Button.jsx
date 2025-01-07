@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import file from "../assets/untitled.pdf";
+import file from "../assets/Untitled.pdf";
 
-export default function MagneticButton({ text, size = 100, color = "blue-500",hover,tcolor }) {
+export default function MagneticButton({ text, size = 100, color = "blue-500", hover, tcolor }) {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
