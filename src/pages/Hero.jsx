@@ -211,7 +211,7 @@ export const Hero = () => {
                 </div>
                 <div className="flex items-center gap-3 py-6 button h-fit">
                   <IoIosArrowRoundForward className='hover-effect text-[2vw]'/> resume
-                    <MagneticButton className='txet-white' text='Download' width="36" height="12" color="black" hover={'hover-effect hover:shadow-lg'} tcolor="white" />
+                    <MagneticButton className='txet-white' text='Download' width="36" height="12" color="black" hover={'hover-effect'} tcolor="white" />
                 </div>
               </div>
               {/* middle */}
