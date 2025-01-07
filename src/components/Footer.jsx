@@ -1,6 +1,8 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Button from './Buttion2'
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 // import { Link } from 'react-router-dom';
 const pathArr = [
   'M55.7447 0H15.3191L0 45.5836H18.2979L4.25532 81.7065H16.5957L5.95745 126L34.4681 82.9966L45.9574 126H120V0H104.681L104.255 110.519H58.2979L45.9574 64.5051H28.0851L42.9787 39.1331L61.7021 106.648H99.5745V0H80V94.6075H76.1702L55.7447 0Z',
@@ -60,40 +62,6 @@ const Footer = () => {
               <h1 className="text-2xl font-semibold md:text-4xl">
                 Let&lsquo;s do great work together
               </h1>
-              {/* <div className="pt-2 pb-6 md:w-99">
-                <p className="py-4 text-xl md:text-2xl">
-                  Sign up for our newsletter*
-                </p>
-                <div className="relative flex items-center justify-between overflow-hidden text-white bg-black border-2 border-black rounded-full hover-button hover:text-black md:text-2xl">
-                  <form
-                    onSubmit={(e) => handleNewsLetterData(e)}
-                    className="relative grid w-full h-full grid-cols-6 z-2">
-                    <input
-                      type="email"
-                      name="newsletter_email"
-                      className="col-span-5 px-6 py-3 bg-transparent border-none"
-                      placeholder="Your Email *"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full h-full text-white bg-white cursor-pointer hover:bg-primaryColor cols-span-1">
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        className="w-full h-[80%]"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                          fill="#000"
-                          fillRule="evenodd"
-                          clipRule="evenodd"></path>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
-              </div> */}
             </div>
             <div className="flex gap-10" id="sitemap-section">
               <ul>
@@ -101,19 +69,19 @@ const Footer = () => {
                   SITEMAP
                 </li>
                 <li className="text-xl font-medium">
-                  <a href="#footer-container">Home</a>
+                  <a href="#home">Home</a>
                 </li>
                 <li className="text-xl font-medium">
                   <a href="#about">About Me</a>
                 </li>
                 <li className="text-xl font-medium">
-                  <a href="#services">Our Services</a>
+                  <a href="#Services">Services</a>
                 </li>
                 <li className="text-xl font-medium">
                   <a href="#projects">Projects</a>
                 </li>
                 <li className="text-xl font-medium">
-                  <a href="#contact-us">Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
               <ul id="social-links-section">
@@ -122,34 +90,30 @@ const Footer = () => {
                 </li>
                 <li className="text-xl font-medium">
                   <a
-                    href="https://www.linkedin.com/company/next-codez/"
+                    href="https://www.linkedin.com/in/abhishek-sathala-64566625a"
                     target="_blank"
                     className="underline">
-                    LinkedIn
+                    <Button
+                      id="linkedin-button"
+                      title="LinkedIn"
+                      leftIcon={<FaLinkedin className="mr-2 text-blue-600" />}
+                      rightIcon={null}
+                    // containerClass="bg-blue-100 hover:bg-blue-200 text-blue-600"
+                    />
                   </a>
                 </li>
                 <li className="text-xl font-medium">
                   <a
-                    href="https://twitter.com/NextCodez"
+                    href="https://github.com/Abhisheksathala"
                     target="_blank"
                     className="underline">
-                    Twitter
-                  </a>
-                </li>
-                <li className="text-xl font-medium">
-                  <a
-                    href="https://www.instagram.com/nextcodez/"
-                    target="_blank"
-                    className="underline">
-                    Instagram
-                  </a>
-                </li>
-                <li className="text-xl font-medium">
-                  <a
-                    href="https://www.facebook.com/nextcodezz"
-                    target="_blank"
-                    className="underline">
-                    Facebook
+                    <Button
+                      id="github-button"
+                      title="GitHub"
+                      leftIcon={<FaGithub className="mr-2 text-gray-800" />}
+                      rightIcon={null}
+                    // containerClass="bg-gray-100 hover:bg-gray-200 text-gray-800"
+                    />
                   </a>
                 </li>
               </ul>

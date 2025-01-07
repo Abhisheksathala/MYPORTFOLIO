@@ -191,7 +191,7 @@ const How = () => {
   return (
     //  page 2 ------------>
     <>
-      <div id="page2 " className="w-full min-h-screen px-6 py-6 bg-black rounded-t-2xl rounded-l-2xl">
+      <div id="Services" className="w-full min-h-screen px-6 py-6 bg-black rounded-t-2xl rounded-l-2xl">
         {/*  */}
         <div ref={firstREF} className="text-white">
           <h2 className="flex-col inline-block gap-4 ml-0 text-4xl font-bold uppercase sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
