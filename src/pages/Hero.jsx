@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { useRef } from "react";
 import SplitType from 'split-type'
 import { IoIosArrowRoundForward } from "react-icons/io";
-import MagneticButton from "../Components/Button";
+import MagneticButton from "../components/Button";
 import abhishek from "../assets/Img/abhishek.jpg"
 
 export const Hero = () => {
