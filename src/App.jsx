@@ -14,6 +14,7 @@ import Developer from './pages/Developer';
 import Footer from './components/Footer';
 import About from './pages/About';
 import Contact from './components/Contact';
+import Open from './pages/Open';
 
 const App = () => {
 
@@ -55,6 +56,7 @@ const App = () => {
         <ProjectShowcase />
         <SkillShowcase />
         <Marq />
+        <Open />
         <About />
         <Developer />
         <Contact />

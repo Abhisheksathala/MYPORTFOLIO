@@ -5,6 +5,8 @@ import SplitType from 'split-type'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import MagneticButton from "../components/Button";
 import abhishek from "../assets/Img/abhishek.jpg"
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   const LoadingREF = useRef(null);
@@ -167,11 +169,34 @@ export const Hero = () => {
     tl.from(avalespan, {
       y: "100%",
     });
+
+
+    gsap.to(Container, {
+      y: "50%",
+      opacity: 0,
+      scale: 0.6,
+      ease: 'power3.out',
+      duration: 0.5,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: Container,
+        start: "80% 50%",
+        end: "bottom -50%",
+        scrub: 1,
+
+        // markers: true,
+      }
+
+    })
+
+
+
+
   }, []); // Empty dependency array ensures it runs only once
 
   return (
     <>
-      <div id='home' className="w-full bg-[#2D2D2D] relative">
+      <div id='home' className="w-full bg-[#DFDFDA] relative">
         <div ref={LoadingREF}
           className="absolute z-10 flex items-center justify-center w-full h-screen bg-transparent pointer-events-none loader-wrap">
           <svg className="absolute top-0 w-[100vw] h-[110vh]" viewBox="0 0 1000 1000" preserveAspectRatio="none">
@@ -210,8 +235,8 @@ export const Hero = () => {
                   <h4 className="overflow-hidden text-2xl font-semibold leading-none tracking-tighter w-fit font-[anzo1]">I'm a web developer based in India. I help growing brands and startups gain an unfair advantage through premium, results-driven websites.</h4>
                 </div>
                 <div className="flex items-center gap-3 py-6 button h-fit">
-                  <IoIosArrowRoundForward className='hover-effect text-[2vw]'/> resume
-                    <MagneticButton className='txet-white' text='Download' width="36" height="12" color="black" hover={'hover-effect'} tcolor="white" />
+
+                  <MagneticButton className='txet-white' text='Download' width="36" height="12" color="black" hover={'hover-effect'} tcolor="white" />
                 </div>
               </div>
               {/* middle */}
