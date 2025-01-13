@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Marq = () => {
   return (
-    <div className="w-screen p-4 overflow-hidden bg-black h-fit projectShow">
+    <div className="block w-screen p-4 overflow-hidden bg-black h-fit projectShow">
       {/* Left to Right Section */}
       <div
         data-scroll
