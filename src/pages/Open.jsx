@@ -26,7 +26,7 @@ const Open = () => {
         start: "30% 50%",
         end: "50% 50%",
         scrub: true,
-        markers: true,
+        // markers: true,
         pin: true,
         anticipatePin: 1,
       
